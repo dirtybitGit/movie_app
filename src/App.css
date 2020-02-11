@@ -86,3 +86,11 @@ body,
   margin-right: 10px;
   font-size: 14px;
 }
+
+.movie a {
+  text-decoration: none;
+}
+
+.movie a :hover {
+  cursor: pointer;
+}

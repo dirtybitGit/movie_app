@@ -2,12 +2,24 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Movie.css";
 
-function Movie({ id, year, title, summary, poster, genres }) {
+function Movie({ id, year, title, summary, poster, genres, imdb }) {
   return (
     <div className="movie">
-      <img src={poster} alt={title} title={title} />
+      <a
+        href={`https://www.imdb.com/title/${imdb}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src={poster} alt={title} title={title} />
+      </a>
       <div className="movie__data">
-        <h3 className="movie__title">{title}</h3>
+        <a
+          href={`https://www.imdb.com/title/${imdb}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h3 className="movie__title">{title}</h3>
+        </a>
         <h5 className="movie__year">{year}</h5>
         <ul className="movie__genres">
           {genres.map((genre, index) => (
