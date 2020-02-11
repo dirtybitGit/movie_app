@@ -5,13 +5,7 @@ import "./Movie.css";
 function Movie({ id, year, title, summary, poster, genres, imdb }) {
   return (
     <div className="movie">
-      <a
-        href={`https://www.imdb.com/title/${imdb}`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src={poster} alt={title} title={title} />
-      </a>
+      <img src={poster} alt={title} title={title} />
       <div className="movie__data">
         <a
           href={`https://www.imdb.com/title/${imdb}`}
